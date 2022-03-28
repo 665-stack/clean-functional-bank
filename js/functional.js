@@ -44,3 +44,4 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
         updateBalance(amount, false);
     }
 })
+
