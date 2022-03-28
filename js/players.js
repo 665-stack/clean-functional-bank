@@ -8,3 +8,8 @@ for (const player of players) {
 function addPlayer() {
     const playersContainer = document.getElementById('players');
 }
+//1st player
+document.getElementsByClassName('player')[3].style.backgroundColor = 'SeaGreen'
+//4th player
+document.querySelector(' #players .player:first-child').style.backgroundColor = 'ForestGreen'
+
