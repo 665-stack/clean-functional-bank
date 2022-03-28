@@ -12,17 +12,12 @@ function getInnerTextValue(fieldId) {
     return value;
 }
 function updateTotal(fieldId, amount) {
-    const totalTag = document.getElementById(fieldId);
-    const previousTotalInText = totalTag.innerText;
-    const previousTotal = parseFloat(previousTotalInText);
+    const previousTotal = getInnerTextValue(fieldId);
     const newTotal = previousTotal + amount;
-    totalTag.innerText = newTotal;
-
+    document.getElementById(fieldId).innerText = newTotal;
 }
 function updateBalance(amount, isAddindg) {
-    const balanceTag = document.getElementById('balance-total');
-    const balanceInText = balanceTag.innerText;
-    const previousBalance = parseFloat(balanceInText);
+    const previousBalance = getInnerTextValue('balance-total');
     let newBalance;
     if (isAddindg == true) {
         newBalance = previousBalance + amount;
@@ -30,9 +25,9 @@ function updateBalance(amount, isAddindg) {
     else {
         newBalance = previousBalance - amount;
     }
-    balanceTag.innerText = newBalance;
+    document.getElementById('balance-total').innerText = newBalance;
 }
-//deposit handler
+// deposit handler
 document.getElementById('deposit-button').addEventListener('click', function () {
     const amount = getInputValue('deposit-input');
     if (amount > 0) {
