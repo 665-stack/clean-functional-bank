@@ -10,11 +10,22 @@
         /* #players .player:first-child {
             background-color: rgb(175, 240, 178);
         } */
+        body {
+            margin-bottom: 500px;
+        }
 
         .player-name {
             font-size: 1.5rem;
             font-weight: 600;
-            color: rgb(201, 163, 68);
+            color: rgb(48, 43, 32);
+        }
+
+        .addPlayer {
+            background-color: rgb(41, 148, 86);
+            padding: 8px 10px 8px 10px;
+            margin-left: 12px;
+            border-radius: 5px;
+            color: white;
         }
     </style>
 </head>
@@ -49,8 +60,8 @@
                     repellat, consectetur neque dolores consequuntur odio esse tempora? Ad iusto impedit odio nihil
                     quaerat et minima.</p>
             </div>
-            <button onclick="addPlayer">Add Player</button>
         </section>
+        <button onclick="addPlayer()" class="addPlayer">Add Player</button>
     </main>
     <!-- javaScript -->
     <script src="js/players.js"></script>
