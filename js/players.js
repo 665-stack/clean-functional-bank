@@ -7,10 +7,7 @@ function setPlayerStyle(player) {
 const players = document.getElementsByClassName('player');
 for (const player of players) {
     setPlayerStyle(player);
-    player.addEventListener('click', function () {
-        player.style.backgroundColor = '#557B83';
-        player.style.color = 'white'
-    })
+
 }
 //add player with button;
 function addPlayer() {
@@ -27,17 +24,19 @@ function addPlayer() {
 
     //appendChild
     playersContainer.appendChild(player);
-    console.log(player);
     //styles -- 
     setPlayerStyle(player);
-    player.addEventListener('click', function () {
-        player.style.backgroundColor = '#557B83';
-        player.style.color = 'white'
-    })
-
-
 }
+document.getElementById('players').addEventListener('click', function (event) {
+    if (event.target.tagName.toLowerCase() == 'div') {
+        event.target.style.backgroundColor = '#557B83';
+    }
+    else {
+        event.target.parentNode.style.backgroundColor = '#557B83'
 
+    }
+
+})
 
 
 
